@@ -28,7 +28,7 @@ def create_post_mask(polygons, img_mask, damage_level):
     interiors = [int_coords(pi.coords) for poly in polygons 
                 for pi in poly.interiors]
     #color to represent damage level: RED, BLUE, YELLOW, PINK
-    labels = {'destroyed': (255,0,0), 'major-damage': (0,0,255), 'minor-damage': (255,255,0), 'no-damage': (255,192,203)}
+    labels = {'destroyed': (255,0,0), 'major-damage': (0,0,255), 'minor-damage': (255,255,0), 'no-damage': (255,192,203), 'un-classified': (0,205,2)}
     
     for i in range(len(exteriors)):
         cv2.fillPoly(img_mask, [exteriors[i]], labels[damage_level[i]])
