@@ -24,3 +24,4 @@ The masks for the images will be created and saved in the masks folder.
              BLUE: Major-damage
              YELLOW: Minor-damage
              PINK: No-damage
+             GREEN: Un-classified
